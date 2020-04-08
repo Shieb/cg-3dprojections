@@ -34,7 +34,7 @@ function Mat4x4Parallel(mat4x4, prp, srp, vup, clip) {
     // 4. translate near clipping plane to origin
 	Mat4x4Translate(translateNear, 0, 0, clip[4]);
 	
-    // 5. scale such that view volume bounds are ([-1,1], [-1,1], [-1,0]) TODO HERE!!!!!
+    // 5. scale such that view volume bounds are ([-1,1], [-1,1], [-1,0]) TODO!!!!!1
 	
     // ...
     // var transform = Matrix.multiply([...]);
@@ -67,7 +67,7 @@ function Mat4x4Projection(mat4x4, prp, srp, vup, clip) {
 		
     // 3. shear such that CW is on the z-axis
 	var CW = new Vector3((clip[0] + clip[1]) / 2, (clip[2] + clip[3]) / 2, -(clip[4]));
-	var DOP = CW.subtract(prp);
+	var DOP = CW;
 	var shx = -DOP.x / DOP.z;
 	var shy = -DOP.y / DOP.z;
 

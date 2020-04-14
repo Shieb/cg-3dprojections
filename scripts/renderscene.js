@@ -77,7 +77,7 @@ function Init() {
                 type: 'generic',
                 animation: {
                     axis: 'y',
-                    rps: 2
+                    rps: 0.15
                 },
                 vertices: [
                     Vector4( 0,  0, -30, 1),
